@@ -1,0 +1,98 @@
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+}
+
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  margin-top:200px;
+  width: 30%;
+  margin-left: 40%;
+}
+.tl-Header{
+  font-size: 20px;
+  padding: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+  width:85%;
+}
+
+.checkbox{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 100%; /* Hace que el checkbox sea circular */
+  cursor: pointer;
+}
+.tl-body-li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style:none;
+  background: rgb(220, 217, 217) ;
+  border-radius: 10px;
+  margin-right:110px ;
+  padding: 15px;
+
+  width:90%;
+}
+
+.tl-body-span{
+  padding-right: 50PX;
+  font-size: 20px;
+  padding-left: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(103, 103, 203);
+}
+.boton-i{
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.edit{
+  color:rgb(77, 151, 176);
+}
+.edit:hover{
+  color: black;
+}
+.trash{
+  color:red;
+}
+.trash:hover{
+  color: blue;
+}
+
+
+#MyInput{
+  width: 370px;
+  height: 50px;
+  border-radius: 10px;
+}
+#MyInput::placeholder {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.tl-Header-btn-2{
+  width: 50px;
+  height: 50px;
+  margin-left: 7.4px;
+  background-color: lightskyblue;
+  color: white;
+  font-size: 25px;
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tl-Header-btn-2:hover{
+  background-color: gray;
+}
