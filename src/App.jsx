@@ -7,6 +7,10 @@ export default function App() {
   return (
     <div className="container">
       <Header title={"Todo App"} />
+      <input  placeholder="Add your new todo" id="MyInput"/>
+      <span className="tl-Header-btn">
+        <button className="tl-Header-btn-2">+</button>
+      </span>
       <TaskList tasks={Tareas}/>
     </div>
   )

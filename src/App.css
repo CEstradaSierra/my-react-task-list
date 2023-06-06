@@ -4,59 +4,53 @@ main {
   line-height: 100vh
 }
 
-.container{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid grey;
-  margin-top:200px;
-  width: 30%;
-  margin-left: 40%;
+.container {
+  margin-left: 450px;
 }
 .tl-Header{
   font-size: 20px;
-  padding: 20px;
+  margin-left: 40px;
   font-family:Arial, Helvetica, sans-serif;
   width:85%;
 }
 
 .checkbox{
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: #ccc;
   border-radius: 100%; /* Hace que el checkbox sea circular */
   cursor: pointer;
 }
 .tl-body-li{
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between; */
   list-style:none;
   background: rgb(220, 217, 217) ;
   border-radius: 10px;
   margin-right:110px ;
   padding: 15px;
 
-  width:90%;
+  width:50%;
 }
 
 .tl-body-span{
   padding-right: 50PX;
-  font-size: 20px;
-  padding-left: 10px;
+  font-size: 50px;
+  padding-left: 40px;
+  padding-right: 500px;
   font-family:Arial, Helvetica, sans-serif;
   color: rgb(103, 103, 203);
 }
 .boton-i{
   margin-left: -20px;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 40px;
 }
 .edit{
   color:rgb(77, 151, 176);
@@ -73,19 +67,21 @@ main {
 
 
 #MyInput{
-  width: 370px;
-  height: 50px;
+  width: 1250px;
+  height: 60px;
   border-radius: 10px;
+  margin-left:45px ;
+  font-size: 45px;
 }
 #MyInput::placeholder {
-  font-size: 20px;
+  font-size: 30px;
   padding-left: 10px;
 }
 
 .tl-Header-btn-2{
-  width: 50px;
-  height: 50px;
-  margin-left: 7.4px;
+  width: 60px;
+  height: 60px;
+  margin-left: 7px;
   background-color: lightskyblue;
   color: white;
   font-size: 25px;

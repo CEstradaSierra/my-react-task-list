@@ -1,0 +1,50 @@
+import { useEffect, useState } from 'react';
+import { TaskCard } from './TaskCard';
+
+export const TaskList = (props) => {
+  const { tasks } = props;
+  const [tareas, setTareas] = useState([]);
+
+  const handleCheckTask = (taskName) => {
+    const newTareas = [...tareas];
+    if (newTareas.includes(taskName)) {
+      newTareas.splice(newTareas.indexOf(taskName), 1);
+    } else {
+      newTareas.push(taskName);
+    }
+    setTareas(newTareas);
+    localStorage.setItem("tareas", JSON.stringify(newTareas));
+  };
+
+  useEffect(() => {
+    const localStoreageData = localStorage.getItem('tareas');
+    const storedTareas = JSON.parse(localStoreageData);
+    setTareas(storedTareas);
+  }, []);
+
+  const handleClickDelete = (taskName) => {
+    const filteredTasks = tasks.filter((task) => task.taskName !== taskName);
+    setTareas(tareas.filter((task) => task !== taskName));
+    localStorage.setItem("tareas", JSON.stringify(tareas.filter((task) => task !== taskName)));
+    // Actualizar la lista de tareas en el componente padre o realizar cualquier otra acción necesaria
+  };
+
+  const filteredTasks = tasks.filter((item) => tareas.includes(item.taskName));
+
+  return (
+    <>
+      {filteredTasks.map((item) => (
+        <div key={item.id}>
+          <ul className="tl-body-ul">
+            <TaskCard
+              taskName={item.taskName}
+              onCheckTask={handleCheckTask}
+              isDone={tareas.includes(item.taskName)}
+              deleteTask={() => handleClickDelete(item.taskName)}
+            />
+          </ul>
+        </div>
+      ))}
+    </>
+  );
+};
