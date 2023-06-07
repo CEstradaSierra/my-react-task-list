@@ -1,0 +1,20 @@
+Importación de módulos y componentes: Se importa el componente TaskCard desde el archivo TaskCard.js y se importan las funciones useState y useEffect desde el módulo 'react'.
+
+Definición del componente TaskList: Se declara una función de componente llamada TaskList que acepta props como argumento.
+
+Desestructuración de las propiedades: Se utiliza la desestructuración de objetos para extraer la propiedad tasks de las props. Esto se hace para acceder a las tareas que se pasan como prop al componente TaskList.
+
+Declaración de estados: Se utilizan los hooks useState para declarar diferentes estados del componente:
+
+tarea y setTarea: Representan un arreglo vacío para almacenar las tareas completadas o no completadas.
+caputurarValor y setCapturarValor: Representan un estado para capturar el valor del input donde se ingresan nuevas tareas.
+agregarValor y setAgregarValor: Representan un estado inicializado con el valor de tasks pasado como prop, que se utiliza para agregar nuevas tareas.
+Variable incrementarId: Se declara una variable incrementarId con un valor de 4. No se utiliza en el código proporcionado.
+
+Función agregarTarea: Esta función se ejecuta cuando se hace clic en el botón de agregar tarea (+). Verifica si el valor de caputurarValor es una cadena vacía o solo contiene espacios en blanco. Si es así, muestra una alerta. De lo contrario, crea un nuevo objeto newTareas con el nombre de la tarea ingresada en caputurarValor y un nuevo ID incrementado en 1. Luego, actualiza el estado agregarValor agregando el nuevo objeto a través de setAgregarValor.
+
+Función handleVerifiedCheckbox: Esta función se utiliza para marcar una tarea como completada o no completada. Recibe el nombre de la tarea como argumento. Comienza verificando si la tarea ya está incluida en el arreglo tarea utilizando tarea.findIndex. Si el índice es igual a -1, significa que la tarea no está incluida, por lo que se agrega al arreglo newTareas con la propiedad checked establecida en true. Si el índice no es -1, se invierte el valor de checked en la tarea correspondiente en newTareas. Finalmente, se actualiza el estado tarea con el nuevo arreglo newTareas utilizando setTarea y se guarda en el almacenamiento local a través de localStorage.setItem.
+
+Hook useEffect: Se utiliza el hook useEffect para cargar los datos del almacenamiento local en el estado tarea cuando el componente se monta por primera vez. Dentro de useEffect, se obtienen los datos del almacenamiento local utilizando localStorage.getItem y se parsean a un objeto JavaScript utilizando JSON.parse. Luego, se actualiza el estado tarea con los datos obtenidos utilizando setTarea. El efecto se ejecuta solo una vez pasando un arreglo vacío como segundo argumento.
+
+console.log(tarea): Muestra por consola el contenido del estado tarea. Esto se ejecutará
