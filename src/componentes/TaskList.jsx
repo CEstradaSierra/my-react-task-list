@@ -17,6 +17,7 @@ export const TaskList = (props) => {
     }else{
       let newTareas={taskName:caputurarValor,id:incrementarId+1}
       setAgregarValor([...agregarValor,newTareas])
+      setCapturarValor('');
     }
     /* let newTareas={taskName:caputurarValor,id:incrementarId+1}
     setAgregarValor([...agregarValor,newTareas])

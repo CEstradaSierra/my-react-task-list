@@ -12,7 +12,7 @@ main {
   border: 1px solid grey;
   margin-top:200px;
   width: 40%;
-  margin-left: 40%;
+  margin-left: 30%;
   padding-bottom: 50px;
 }
 .tl-Header{
@@ -39,13 +39,12 @@ main {
   border-radius: 10px;
   margin-right:110px ;
   padding: 15px;
-
   width:90%;
 }
 
 .tl-body-span{
   padding-right: 50PX;
-  font-size: 40px;
+  font-size: 55px;
   padding-left: 10px;
   font-family:Arial, Helvetica, sans-serif;
   color: rgb(103, 103, 203);
@@ -57,7 +56,7 @@ main {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 35px;
 }
 .edit{
   color:rgb(77, 151, 176);
@@ -74,13 +73,13 @@ main {
 
 
 #MyInput{
-  width: 590px;
-  height: 60px;
+  width: 800px;
+  height: 90px;
   border-radius: 10px;
   font-size: 35px;
 }
 #MyInput::placeholder {
-  font-size: 30px;
+  font-size: 40px;
   padding-left: 10px;
 }
 
@@ -92,11 +91,11 @@ main {
   margin-right: 10px;
 }
 .tl-Header-btn-2{
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   background-color: lightskyblue;
   color: white;
-  font-size: 35px;
+  font-size: 45px;
   border:none;
   border-radius: 10px;
   cursor: pointer;
